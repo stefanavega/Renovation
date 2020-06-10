@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lorem Ipsum</title> <!--TITLU IN TAB-->
+    <link href="https://fonts.googleapis.com/css?family=Jura|Rajdhani:600" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+  </head>
+  <body>
+      <div class="background"></div>
+      <header>
+          <div class="left">
+            <p>Lorem Ipsum</p> <!--TITLU-->
+          </div>
+          <div class="right">
+            <ul class="navigation">
+                <li><a href="index.html">acasa</a></li>
+                <li><a href="news.html">noutati</a></li>
+                <li><a href="gallery.html">galerie</a></li>
+                <li><a href="contact.html">contact</a></li>
+            </ul>
+          </div>
+          <div class="clearfix"></div>
+      </header>
+      <main>
+        <div class="contactmain">
+            <h1>orar</h1>
+            <div class="left">
+                <ul>
+                    <li>luni - vineri</li>
+                    <li>sambata</li>
+                    <li>duminica</li>
+                </ul>
+            </div>
+            <div class="right">
+                <ul>
+                    <li>08:00 - 17:00</li>
+                    <li>10:00 - 15:00</li>
+                    <li>inchis</li>
+                </ul>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="contactmain">
+            <h1>contact</h1>
+            <div class="left">
+                <ul>
+                    <li>numar de telefon</li>
+                    <li>adresa de e-mail</li>
+                    <li>adresa</li>
+                </ul>
+            </div>
+            <div class="right">
+                <ul>
+                    <li>+40 758 097 068</li>
+                    <li class="dontcapitalize">susaru_sevastian@yahoo.ro</li>
+                    <li>
+Palatul Episcopal Romano-Catolic, Strada Episcop Augustin Pacha, Timisoara</li>
+                </ul>
+            </div>
+            <div class="clearfix"></div>
+            <div id="map" class="map"></div>
+        </div>
+        <div class="contactmain">
+            <h1>formular rapid de contact</h1>
+            <form>
+                <input type="text" placeholder="nume, prenume" required>
+                <input type="email" placeholder="email" required>
+                <input type="number" placeholder="+40 720 000 000">
+                <textarea placeholder="mesaj" required></textarea>
+                <input type="submit" value="trimite">
+            </form>
+        </div>
+        <div class="contactmain">
+            <h1>ne gasiti si in urmatoarele locuri</h1>
+            <div class="left">
+                <ul> <!--ADAUGA LINK COMPLET (http://www....) IN LOC DE # PENTRU FIECARE ICON-->
+                    <li><a href="#"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+            <div class="right">
+                <ul>
+                    <li class="socialmedia">facebook</li>
+                    <li class="socialmedia">instagram</li>
+                    <li class="socialmedia">twitter</li>
+                </ul>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+      </main>
+      
+      <!--HARTA-->
+      <script>
+            function myMap() 
+            {   var yourCompany =  new google.maps.LatLng(45.756, 21.23); //change these for other coordonates (1st: latitude, 2nd: longitude)
+                var mapOptions = {
+                    center: yourCompany,
+                    zoom: 16, //change this if you want your map to be displayed more closer to your location or farther away - increase the number for more zoom-in
+                    mapTypeId: google.maps.MapTypeId.HYBRID
+                }
+                var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+                var marker = new google.maps.Marker({
+                      position: yourCompany,
+                      map: map
+                    });
+            }
+        </script>
+        <script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
+  </body>
+</html>
